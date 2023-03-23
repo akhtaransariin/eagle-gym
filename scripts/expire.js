@@ -67,13 +67,13 @@ if (MyDate === element.endDateValue){
     tr.append(id,name,mobile,start,end,gender,button);
     rows.append(tr);
     button.addEventListener("click",()=>{
-        fetch(`https://giant-hare-tank-top.cyclic.app/user${element.id}`, {
+        fetch(`https://giant-hare-tank-top.cyclic.app/user/${element.id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
         }
         })
-        alert("MemberShip Deleted");
+        alert(`${element.nameValue} Membership has been Removed`);
         fetch_data();
         })
     }
