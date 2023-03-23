@@ -12,7 +12,7 @@ window.addEventListener("load",fetch_data);
 
 function fetch_data() {
 
-    fetch('https://giant-hare-tank-top.cyclic.app/user')
+    fetch('https://eagle-member.onrender.com/user')
     .then(response => response.json())
     .then(data => {
 
@@ -68,13 +68,13 @@ if (MyDate === element.endDateValue){
     button.style.backgroundColor = "RED";
 }
     button.addEventListener("click",()=>{
-        fetch(`https://giant-hare-tank-top.cyclic.app/user/${element.id}`, {
+        fetch(`https://eagle-member.onrender.com/user/${element.id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
         }
         })
-        alert(`${element.nameValue} Membership Removed`);
+        alert(`${element.nameValue} Membership has been Removed`);
         fetch_data();
         })
     });
