@@ -43,7 +43,7 @@
   }
   #nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 30px;
     margin: 2%;
     padding: 10px;
