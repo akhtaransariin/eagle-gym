@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expired Member's</title>
+    <link rel="stylesheet" href="./css/member.css">
+</head>
+<body>
+  <div id="nav">
+    <a href="./registration.html"> Registration</a>
+    <a href="./member_page.html">  Members</a>
+  </div>
+  <div id="search">
+    <form>
+      <input id="input" type="number" placeholder="Enter ID/MobileNumber">
+      <input id="enter" type="submit" value="Search">
+    </form>
+  </div>
+  <h1>Expiring Today</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile Number</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Gender</th>
+            <th idm="mid">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="rows">
+        </tbody>
+      </table>
+</body>
+</html>
+<script src="./scripts/expire.js"></script>

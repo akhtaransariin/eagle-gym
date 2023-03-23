@@ -1,0 +1,104 @@
+table {
+  border-collapse: collapse;  
+  width: 100%;
+  border: solid black;
+
+
+  }
+  
+  th {
+    background-color: rgb(157, 40, 9);
+    color: white;
+  }
+  .button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .button:hover {
+    background-color: teal;
+  }
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: solid 1px;
+}
+#rows  tr{
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 3) 0px 18px 36px -18px inset;
+  
+}
+#rows td:nth-child(7){
+  /* padding: 10px; */
+  text-align: center;
+  border: solid 1px;
+
+}
+
+#search{
+  text-align: center;  
+  margin: auto;
+  width: 40%;
+}
+
+form > input:nth-child(1){
+padding: 10px;
+margin: 10px;
+width: 100%;
+border-radius: 10px;
+border: solid teal 3px;
+}
+
+form > input:nth-child(2){
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  border-radius: 8px;
+  border: none;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+
+  }
+
+
+  form > input:nth-child(2):hover{
+    background-color: rgb(157, 40, 9);
+    color: white;
+    }
+
+
+  #nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  #nav a {
+    color: rgb(157, 40, 9);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #nav a:hover {
+    background-color: rgb(157, 40, 9);
+    color: white;
+  }
+
+  body{
+    background-image: url(/./Img/steven-cordes-hpPs32vLD7I-unsplash.jpg);
+    background-size: 100%;
+    font-family:  'Courier New';
+    
+    }
+    h1{
+      text-align: center;
+      color: purple;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    }
