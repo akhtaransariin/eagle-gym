@@ -12,7 +12,7 @@ window.addEventListener("load",fetch_data);
 
 function fetch_data() {
 
-    fetch('https://eagle-member.onrender.com/user')
+    fetch('https://eagle.up.railway.app/user')
     .then(response => response.json())
     .then(data => {
 
@@ -68,7 +68,7 @@ if (MyDate === element.endDateValue){
     button.style.backgroundColor = "RED";
 }
     button.addEventListener("click",()=>{
-        fetch(`https://eagle-member.onrender.com/user/${element.id}`, {
+        fetch(`https://eagle.up.railway.app/user/${element.id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'

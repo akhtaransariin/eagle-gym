@@ -10,7 +10,7 @@ submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   let flag = nameInput.value !=="" && mobileInput.value !=="" && startDateInput.value !=="" && endDateInput.value !=="" && genderSelect.value !=="";
 if (flag){
-  fetch('https://eagle-member.onrender.com/user', {
+  fetch('https://eagle.up.railway.app/user', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
