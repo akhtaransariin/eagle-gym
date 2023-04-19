@@ -7,7 +7,7 @@ if (month < 10){
 }else {
     month = month+1;
 }
-
+let final_date = +`${date.getFullYear()}${month}${date.getDate()}`;
 window.addEventListener("load",fetch_data);
 
 function fetch_data() {
@@ -39,11 +39,12 @@ function fetch_data() {
     })
 
 }
-function dom_data(params){
-    let MyDate =`${date.getFullYear()}-${month}-${date.getDate()}` 
-    
+function dom_data(params){    
     rows.innerHTML = null;
     params.forEach(element => {
+
+    let expire_date = +element.endDateValue.replace('-','').replace('-','');
+    console.log(expire_date)
     let tr = document.createElement("tr");
     let id = document.createElement("td");
     let name = document.createElement("td");
@@ -64,9 +65,12 @@ function dom_data(params){
     button.innerText = "Delete Membership";
     tr.append(id,name,mobile,start,end,gender,button);
     rows.append(tr);
-if (MyDate === element.endDateValue){
-    button.style.backgroundColor = "RED";
-}
+
+    if (final_date >= expire_date){
+        button.style.backgroundColor = "RED";
+    }
+
+
     button.addEventListener("click",()=>{
         fetch(`https://eagle.up.railway.app/user/${element.id}`, {
         method: 'DELETE',

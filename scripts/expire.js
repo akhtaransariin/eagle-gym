@@ -8,6 +8,8 @@ if (month < 10){
     month = month+1;
 }
 
+let final_date = +`${date.getFullYear()}${month}${date.getDate()}`;
+
 window.addEventListener("load",fetch_data);
 
 function fetch_data() {
@@ -40,12 +42,13 @@ function fetch_data() {
 
 }
 function dom_data(params){
-    let MyDate =`${date.getFullYear()}-${month}-${date.getDate()}` 
-    
+        
     rows.innerHTML = null;
     params.forEach(element => {
+
+    let expire_date = +element.endDateValue.replace('-','').replace('-','');
     
-if (MyDate === element.endDateValue){
+if ( final_date >= expire_date){
     let tr = document.createElement("tr");
     let id = document.createElement("td");
     let name = document.createElement("td");
