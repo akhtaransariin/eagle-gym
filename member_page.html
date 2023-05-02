@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/member.css">
 </head>
 <body>
+  <button id="backup" onclick="fetchAndDownloadJSON()"> Download JSON as Excel</button>
   <div id="nav">
     <a href="./registration.html"> Registration</a>
     <a href="./index.html"> Expired Memberships</a>
@@ -39,3 +40,4 @@
 </body>
 </html>
 <script src="./scripts/member.js"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>

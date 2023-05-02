@@ -89,5 +89,47 @@ function dom_data(params){
 }
 
 
+function fetchAndDownloadJSON() {
+    fetch('https://eagle.up.railway.app/user/') // Replace with your JSON API URL
+      .then(response => response.json())
+      .then(data => {
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.json_to_sheet(data);
 
+        XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+        const wbOptions = { bookType: 'xlsx', type: 'binary' };
+        const wbData = XLSX.write(wb, wbOptions);
+
+        const fileName = 'data.xlsx';
+        saveAs(new Blob([s2ab(wbData)], { type: 'application/octet-stream' }), fileName);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Handle the error
+      });
+  }
+
+  function saveAs(data, fileName) {
+    const a = document.createElement('a');
+    document.body.appendChild(a);
+    a.style = 'display: none';
+
+    const url = window.URL.createObjectURL(data);
+    a.href = url;
+    a.download = fileName;
+    a.click();
+
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  }
+
+  function s2ab(s) {
+    const buf = new ArrayBuffer(s.length);
+    const view = new Uint8Array(buf);
+    for (let i = 0; i < s.length; i++) {
+      view[i] = s.charCodeAt(i) & 0xFF;
+    }
+    return buf;
+  }
 

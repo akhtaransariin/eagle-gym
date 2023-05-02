@@ -102,3 +102,48 @@ form > input:nth-child(2){
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
     }
+    .form-container {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    #backup{
+      color:  black;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
