@@ -29,16 +29,15 @@ function fetch_data() {
         e.preventDefault()
         let value = form.input.value;
         
-        if (value.length < 5){
+        if (value.length < 3){
             let filter = arr.filter(el=>{return el.id == value})
             dom_data(filter);
-        }else {
+        }else if( value.length == 10){
             let filter = arr.filter(el=>{return el.mobileValue === value})
             dom_data(filter);
-        }
-
-        if (value === ""){
-            dom_data(data);    
+        }else if (+value.length%+value.value !== 0){
+            let filter = arr.filter(el=>{return el.nameValue.includes(value)})
+            dom_data(filter);
         }
 
     });
@@ -47,7 +46,7 @@ function fetch_data() {
     })
 
 }
-console.log(date.getDate());
+
 function dom_data(params){
         
     rows.innerHTML = null;
@@ -66,9 +65,14 @@ if ( final_date >= expire_date){
     let end= document.createElement("td");
     let gender =  document.createElement("td");
     let button = document.createElement("td");
+    let buttonRenew = document.createElement("td");
 
     button.style.textAlign = "center";
     button.classList = "button";
+
+    buttonRenew.style.textAlign = "center";
+    buttonRenew.classList = "button";
+
     id.innerText = element.id;
     name.innerText   = element.nameValue;
     mobile.innerText = element.mobileValue; 
@@ -76,7 +80,9 @@ if ( final_date >= expire_date){
     end.innerText    = element.endDateValue;
     gender.innerText = element.genderValue;
     button.innerText = "Delete Membership";
-    tr.append(id,name,mobile,start,end,gender,button);
+    buttonRenew.innerText = "Renew Membership"
+
+    tr.append(id,name,mobile,start,end,gender,button,buttonRenew);
     rows.append(tr);
     button.addEventListener("click",()=>{
         fetch(`https://eagle.up.railway.app/user/${element.id}`, {

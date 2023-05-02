@@ -26,16 +26,15 @@ function fetch_data() {
         e.preventDefault()
         let value = form.input.value;
         
-        if (value.length < 5){
+        if (value.length < 3){
             let filter = arr.filter(el=>{return el.id == value})
             dom_data(filter);
-        }else {
+        }else if( value.length == 10){
             let filter = arr.filter(el=>{return el.mobileValue === value})
             dom_data(filter);
-        }
-
-        if (value === ""){
-            dom_data(data);    
+        }else if (+value.length%+value.value !== 0){
+            let filter = arr.filter(el=>{return el.nameValue.includes(value)})
+            dom_data(filter);
         }
 
     });
@@ -49,7 +48,7 @@ function dom_data(params){
     params.forEach(element => {
 
     let expire_date = +element.endDateValue.replace('-','').replace('-','');
-    console.log(expire_date)
+    
     let tr = document.createElement("tr");
     let id = document.createElement("td");
     let name = document.createElement("td");
