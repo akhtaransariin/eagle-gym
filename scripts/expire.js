@@ -8,7 +8,13 @@ if (month < 10){
     month = month+1;
 }
 
-let final_date = +`${date.getFullYear()}${month}${date.getDate()}`;
+let day = date.getDate();
+if (day < 10){
+    day = "0"+day;
+}
+
+
+let final_date = +`${date.getFullYear()}${month}${day}`;
 
 window.addEventListener("load",fetch_data);
 
@@ -41,12 +47,15 @@ function fetch_data() {
     })
 
 }
+console.log(date.getDate());
 function dom_data(params){
         
     rows.innerHTML = null;
     params.forEach(element => {
 
     let expire_date = +element.endDateValue.replace('-','').replace('-','');
+    
+
     
 if ( final_date >= expire_date){
     let tr = document.createElement("tr");

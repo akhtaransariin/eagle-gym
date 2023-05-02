@@ -7,7 +7,12 @@ if (month < 10){
 }else {
     month = month+1;
 }
-let final_date = +`${date.getFullYear()}${month}${date.getDate()}`;
+
+let day = date.getDate();
+if (day < 10){
+    day = "0"+day;
+}
+let final_date = +`${date.getFullYear()}${month}${day}`;
 window.addEventListener("load",fetch_data);
 
 function fetch_data() {
