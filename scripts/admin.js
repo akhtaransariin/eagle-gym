@@ -6,6 +6,7 @@ const endDateInput = document.querySelector('#end-date');
 const genderSelect = document.querySelector('#gender');
 const submitButton = document.querySelector('#submit-btn');
 
+
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   let flag = nameInput.value !=="" && mobileInput.value !=="" && startDateInput.value !=="" && endDateInput.value !=="" && genderSelect.value !=="";

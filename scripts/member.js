@@ -1,5 +1,7 @@
 let rows = document.getElementById("rows")
 let form = document.querySelector("form")
+const wholePage = document.querySelector("body");
+console.log(wholePage);
 let date = new Date();
 let month = date.getMonth();
 if (month < 10){
