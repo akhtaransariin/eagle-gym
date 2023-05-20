@@ -36,7 +36,8 @@ function fetch_data() {
             let filter = arr.filter(el=>{return el.mobileValue === value})
             dom_data(filter);
         }else if (+value.length%+value.value !== 0){
-            let filter = arr.filter(el=>{return el.nameValue.includes(value)})
+            let filter = arr.filter(el => {return el.nameValue.toLowerCase().includes(value.toLowerCase())});
+
             dom_data(filter);
         }
 
