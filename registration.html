@@ -8,7 +8,7 @@
 
   <div id="nav">
     <a href="./member_page.html"> Members</a>
-    <a href="./index.html"> Expired Memberships</a>
+    <a href="./dashboard.html"> Expired Memberships</a>
   </div>
 
   <div class="form-container">
@@ -19,9 +19,11 @@
       <label for="mobile">Mobile Number:</label>
       <input type="number" id="mobile" name="mobile" pattern="[0-9]{10}" required>
       <label for="start-date">Start Date:</label>
-      <input type="date" id="start-date" name="start-date" required>
+      <input type="date" id="start-date" name="start-date" pattern="\d{4}-\d{2}-\d{2}" required>
+      <!-- <input type="date" id="start-date" name="start-date" required> -->
       <label for="end-date">End Date:</label>
-      <input type="date" id="end-date" name="end-date" required>
+      <input type="date" id="end-date" name=end-date" pattern="\d{4}-\d{2}-\d{2}" required>
+      <!-- <input type="date" id="end-date" name="end-date" required> -->
       <label for="gender">Gender:</label>
       <select id="gender" name="gender" required>
         <option value="">--Select--</option>
@@ -31,6 +33,6 @@
       <button type="button" id="submit-btn">Submit</button>
     </form>
   </div>
-  <script src="./scripts/admin.js"></script>
+  <script src="./scripts/register.js"></script>
 </body>
 </html>

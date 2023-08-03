@@ -1,58 +1,57 @@
-table {
-  border-collapse: collapse;  
-  width: 100%;
-  border: solid black;
+body {
+  background-image: url(/./Img/steven-cordes-hpPs32vLD7I-unsplash.jpg);
+  background-size: cover;
+  font-family: 'Courier New';
+}
 
-
-  }
-  
-  th {
-    background-color: rgb(157, 40, 9);
-    color: white;
-  }
-  .button{
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 10px;
-  }
-  
-  .button:hover {
-    background-color: teal;
-  }
-th, td {
-  text-align: left;
+#nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
   padding: 10px;
-  border: solid 1px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-#rows  tr{
+
+#nav a {
+  color: rgb(157, 40, 9);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#nav a:hover {
+  background-color: rgb(157, 40, 9);
   color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 3) 0px 18px 36px -18px inset;
-  
 }
-#rows td:nth-child(7){
-  /* padding: 10px; */
+
+h1 {
   text-align: center;
-  border: solid 1px;
-
+  color: purple;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-#search{
-  text-align: center;  
+#search {
+  text-align: center;
   margin: auto;
   width: 40%;
 }
 
-form > input:nth-child(1){
-padding: 10px;
-margin: 10px;
-width: 100%;
-border-radius: 10px;
-border: solid teal 3px;
+form > input:nth-child(1) {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: solid teal 3px;
 }
 
-form > input:nth-child(2){
+form > input:nth-child(2) {
   padding: 10px;
   margin: 10px;
   width: 30%;
@@ -61,89 +60,281 @@ form > input:nth-child(2){
   background-color: teal;
   color: white;
   cursor: pointer;
+}
 
+form > input:nth-child(2):hover {
+  background-color: rgb(157, 40, 9);
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: rgb(157, 40, 9);
+  color: white;
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: teal;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border: solid 1px;
+}
+
+#rows tr {
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 3) 0px 18px 36px -18px inset;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#rows td:nth-child(7) {
+  text-align: center;
+  border: solid 1px;
+}
+
+#backup {
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Container */
+.form-container {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out; /* Fade-in animation */
+}
+
+.form-container.active {
+  display: block;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -55%);
   }
-
-
-  form > input:nth-child(2):hover{
-    background-color: rgb(157, 40, 9);
-    color: white;
-    }
-
-
-  #nav{
-    display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
-  #nav a {
-    color: rgb(157, 40, 9);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
+}
+
+
+
+
+    /* Login and Resgsiter Page starts */
+
+.container{
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;    
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+.form{
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: #FFF;
+}
+.form.signup{
+  opacity: 0;
+  pointer-events: none;
+}
+.forms.show-signup .form.signup{
+  opacity: 1;
+  pointer-events: auto;
+}
+.forms.show-signup .form.login{
+  opacity: 0;
+  pointer-events: none;
+}
+header{
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+}
+form{
+  margin-top: 30px;
+}
+.form .field{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.field input,
+.field button{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+.field input{
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;
+}
+.field input:focus{
+  border-bottom-width: 2px;
+}
+.eye-icon{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+.field button{
+  color: #fff;
+  background-color: #0171d3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.field button:hover{
+  background-color: #016dcb;
+}
+.form-link{
+  text-align: center;
+  margin-top: 10px;
+}
+.form-link span,
+.form-link a{
+  font-size: 14px;
+  font-weight: 400;
+  color: #232836;
+}
+.form a{
+  color: #0171d3;
+  text-decoration: none;
+}
+.form-content a:hover{
+  text-decoration: underline;
+}
+.line{
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+.line::before{
+  content: 'Or';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+.media-options a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.facebook{
+  color: #fff;
+  background-color: #4267b2;
+}
+a.facebook .facebook-icon{
+  height: 28px;
+  width: 28px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.facebook-icon,
+img.google-img{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+img.google-img{
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+a.google{
+  border: 1px solid #CACACA;
+}
+a.google span{
+  font-weight: 500;
+  opacity: 0.6;
+  color: #232836;
+}
+
+@media screen and (max-width: 400px) {
+  .form{
+      padding: 20px 10px;
   }
-  #nav a:hover {
-    background-color: rgb(157, 40, 9);
-    color: white;
-  }
-
-  body{
-    background-image: url(/./Img/steven-cordes-hpPs32vLD7I-unsplash.jpg);
-    background-size: 100%;
-    font-family:  'Courier New';
-    
-    }
-    h1{
-      text-align: center;
-      color: purple;
-      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
-    }
-    .form-container {
-      display: none;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #f1f1f1;
-      padding: 20px;
-      border-radius: 5px;
-      z-index: 1;
-    }
-
-    .form-container.active {
-      display: block;
-    }
-
-    .form-container label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .form-container input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    .form-container button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-
-    #backup{
-      color:  black;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
+  
+}
+/* end of login an register */

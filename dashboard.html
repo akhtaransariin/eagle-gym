@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member</title>
-    <link rel="stylesheet" href="./css/member.css">
+    <title>Expired Member's</title>
+  <link rel="stylesheet" href="./css/member.css">
+  
 </head>
 <body>
   <div id="nav">
     <a href="./registration.html"> Registration</a>
     <a href="#" id="logout"> Log-out</a>
-    <a href="./dashboard.html"> Expired Memberships</a>
+    <!-- <button id="logout"></button> -->
+    <a href="./member_page.html">  Members</a>
   </div>
-
   <div id="search">
     <form>
       <input id="input"  placeholder="Enter ID/MobileNumber/Name">
       <input id="enter" type="submit" value="Search">
     </form>
   </div>
-  <h1>Active Members</h1>
+  <h1>Expired Memberships</h1>  
     <table>
         <thead>
           <tr>
@@ -31,12 +32,24 @@
             <th>End Date</th>
             <th>Gender</th>
             <th idm="mid">Delete</th>
+            <th idm="mid">Renew</th>
+            <th>Send Message</th>
           </tr>
         </thead>
         <tbody id="rows">
         </tbody>
       </table>
-      
+      <div id="myForm" class="form-container">
+        <form id="renew">
+        <h2 id="renname">Date Range Form</h2>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" required>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="closeForm()">Close</button>
+        </form>
+      </div>    
 </body>
 </html>
-<script src="./scripts/member.js"></script>
+<script src="./scripts/expire.js"></script>
