@@ -1,5 +1,5 @@
 body {
-  background-image: url(/./Img/steven-cordes-hpPs32vLD7I-unsplash.jpg);
+  background-image: url(/./Img/bg.gif);
   background-size: cover;
   font-family: 'Courier New';
 }
@@ -179,7 +179,6 @@ td {
   align-items: center;
   justify-content: center;
   column-gap: 30px;    
-  position: fixed;
   display: flex;
   top: 0;
   left: 0;
@@ -231,7 +230,7 @@ form{
 }
 .field input{
   outline: none;
-  padding: 0 15px;
+  padding: 0 5px;
   border: 1px solid#CACACA;
 }
 .field input:focus{
@@ -295,41 +294,6 @@ form{
   align-items: center;
   justify-content: center;
 }
-a.facebook{
-  color: #fff;
-  background-color: #4267b2;
-}
-a.facebook .facebook-icon{
-  height: 28px;
-  width: 28px;
-  color: #0171d3;
-  font-size: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-}
-.facebook-icon,
-img.google-img{
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-}
-img.google-img{
-  height: 20px;
-  width: 20px;
-  object-fit: cover;
-}
-a.google{
-  border: 1px solid #CACACA;
-}
-a.google span{
-  font-weight: 500;
-  opacity: 0.6;
-  color: #232836;
-}
 
 @media screen and (max-width: 400px) {
   .form{
@@ -337,4 +301,3 @@ a.google span{
   }
   
 }
-/* end of login an register */

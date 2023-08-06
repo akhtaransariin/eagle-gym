@@ -9,8 +9,13 @@ let final_date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
 namedata();
 
 function namedata() {
+
+  if (localStorage.getItem("status") == "false"){
+    window.location.href = "/index.html"
+    return
+  }
   const myHeaders = new Headers();
-  myHeaders.append("Authorization", "Basic YWRtaW46cGFzc3dvcmQ=");
+  myHeaders.append("Authorization", "Basic "+localStorage.getItem("gym"));
 
   const requestOptions = {
     method: 'GET',
@@ -160,7 +165,7 @@ function closeForm() {
 
 function deleteItemById(id) {
   const myHeaders = new Headers();
-  myHeaders.append("Authorization", "Basic YWRtaW46cGFzc3dvcmQ=");
+  myHeaders.append("Authorization", "Basic "+localStorage.getItem("gym"));
 
   const requestOptions = {
     method: 'DELETE',
@@ -187,7 +192,8 @@ function deleteItemById(id) {
 function sendReminder(mobileValue) {
   window.open("https://api.whatsapp.com/send?phone=" + mobileValue + "&text=Your Gym Membership is expired. Please renew to enjoy uninterrupted gym service. Thank you, Eagle Yard Gym");
 }
-
 logout.addEventListener("click", () => {
-  window.location.href = 'http://localhost:1001/logout'; 
+  localStorage.setItem("status",false)
+  localStorage.setItem("gym",null)
+  window.location.href = '/index.html';
 });
